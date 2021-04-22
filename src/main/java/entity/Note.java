@@ -1,39 +1,59 @@
 package entity;
 
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
+
+@Entity(name = "Note")
+@Table(name = "notes")
 public class Note {
-    private String player;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GenericGenerator(name = "native", strategy = "native")
+    private int id;
+
+    private String prospect;
     private String position;
     private String college;
     private int age;
-    private String height;
+
+    @Column(name = "feet")
+    private int heightFeet;
+    @Column(name = "inches")
+    private int heightInches;
+
     private String weight;
-    private String description;
-    private String fortyTime;
-    private int benchReps;
-    private String threeCone;
+    private String report;
 
     public Note() {
     }
 
-    public Note(String player, String position, String college, int age, String height, String weight, String description, String fortyTime, int benchReps, String threeCone) {
-        this.player = player;
+    public Note(int id, String prospect, String position, String college, int age, int heightFeet, int heightInches, String weight, String report) {
+        this.id = id;
+        this.prospect = prospect;
         this.position = position;
         this.college = college;
         this.age = age;
-        this.height = height;
+        this.heightFeet = heightFeet;
+        this.heightInches = heightInches;
         this.weight = weight;
-        this.description = description;
-        this.fortyTime = fortyTime;
-        this.benchReps = benchReps;
-        this.threeCone = threeCone;
+        this.report = report;
     }
 
-    public String getPlayer() {
-        return player;
+    public int getId() {
+        return id;
     }
 
-    public void setPlayer(String player) {
-        this.player = player;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getProspect() {
+        return prospect;
+    }
+
+    public void setProspect(String prospect) {
+        this.prospect = prospect;
     }
 
     public String getPosition() {
@@ -60,12 +80,20 @@ public class Note {
         this.age = age;
     }
 
-    public String getHeight() {
-        return height;
+    public int getHeightFeet() {
+        return heightFeet;
     }
 
-    public void setHeight(String height) {
-        this.height = height;
+    public void setHeightFeet(int heightFeet) {
+        this.heightFeet = heightFeet;
+    }
+
+    public int getHeightInches() {
+        return heightInches;
+    }
+
+    public void setHeightInches(int heightInches) {
+        this.heightInches = heightInches;
     }
 
     public String getWeight() {
@@ -76,35 +104,11 @@ public class Note {
         this.weight = weight;
     }
 
-    public String getDescription() {
-        return description;
+    public String getReport() {
+        return report;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getFortyTime() {
-        return fortyTime;
-    }
-
-    public void setFortyTime(String fortyTime) {
-        this.fortyTime = fortyTime;
-    }
-
-    public int getBenchReps() {
-        return benchReps;
-    }
-
-    public void setBenchReps(int benchReps) {
-        this.benchReps = benchReps;
-    }
-
-    public String getThreeCone() {
-        return threeCone;
-    }
-
-    public void setThreeCone(String threeCone) {
-        this.threeCone = threeCone;
+    public void setReport(String report) {
+        this.report = report;
     }
 }
