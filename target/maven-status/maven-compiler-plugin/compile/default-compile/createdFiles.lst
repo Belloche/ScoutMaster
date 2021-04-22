@@ -1,0 +1,9 @@
+controller/FullNote.class
+controller/Homepage.class
+entity/Admin.class
+persistence/SessionFactoryProvider.class
+persistence/Database.class
+controller/SearchNotes.class
+persistence/GenericDao.class
+controller/NewNote.class
+entity/Note.class
