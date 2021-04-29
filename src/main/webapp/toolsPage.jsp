@@ -14,6 +14,10 @@
     <c:import url="bootstrap.jsp" />
 </head>
 <body>
-
+    <nav class="navBar">
+        <b><a href="/ScoutMaster_war/home" class="navTransition">Scout Master</a></b>
+        <a href="/ScoutMaster_war/newNote" class="navTransition">New Note</a>
+        <button href="/ScoutMaster_war/logout" class="btn btn-danger">Logout</button>
+    </nav>
 </body>
 </html>

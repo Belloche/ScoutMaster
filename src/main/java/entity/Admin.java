@@ -2,30 +2,27 @@ package entity;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
+@Entity(name = "Admin")
+@Table(name = "admin")
 public class Admin {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
     private int id;
 
-    private String name;
-
     @Column(name = "pass")
     private String password;
 
+    @Column(name = "user_name")
     private String username;
 
     public Admin() {
     }
 
-    public Admin(int id, String name, String password, String username) {
+    public Admin(int id, String password, String username) {
         this.id = id;
-        this.name = name;
         this.password = password;
         this.username = username;
     }
@@ -36,14 +33,6 @@ public class Admin {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getPassword() {

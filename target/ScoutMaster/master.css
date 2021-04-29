@@ -23,12 +23,12 @@ body {
 
 .container {
     margin-top: 2em;
-    border: solid blue 6px;
+    border: solid #b3ffb3 6px;
     border-radius: 20px;
     width: auto;
     padding: 1em;
 }
-
+/*ff6666*/
 .container h1 {
     margin-right: auto;
     margin-left: auto;

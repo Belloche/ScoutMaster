@@ -2,6 +2,7 @@ controller/FullNote.class
 controller/Homepage.class
 entity/Admin.class
 persistence/SessionFactoryProvider.class
+controller/Tools.class
 persistence/Database.class
 controller/SearchNotes.class
 persistence/GenericDao.class
