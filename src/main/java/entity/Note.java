@@ -23,12 +23,13 @@ public class Note {
     private int heightInches;
 
     private String weight;
+    private String rating;
     private String report;
 
     public Note() {
     }
 
-    public Note(int id, String prospect, String position, String college, int age, int heightFeet, int heightInches, String weight, String report) {
+    public Note(int id, String prospect, String position, String college, int age, int heightFeet, int heightInches, String weight, String rating, String report) {
         this.id = id;
         this.prospect = prospect;
         this.position = position;
@@ -37,6 +38,7 @@ public class Note {
         this.heightFeet = heightFeet;
         this.heightInches = heightInches;
         this.weight = weight;
+        this.rating = rating;
         this.report = report;
     }
 
@@ -102,6 +104,14 @@ public class Note {
 
     public void setWeight(String weight) {
         this.weight = weight;
+    }
+
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
     }
 
     public String getReport() {

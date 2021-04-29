@@ -1,11 +1,11 @@
 body {
-    background-color: grey !important;
+    background-color: #b3f0ff;
 }
 
 .navBar {
     overflow: hidden;
-    background-color: blue;
     text-decoration: none;
+    background-color: #3399ff;
 }
 
 .navBar a {
@@ -17,13 +17,42 @@ body {
 }
 .navTransition:hover {
     transition: 0.2s;
-    background-color: darkblue;
-    color: black !important;
+    background-color: blue;
+    color: white !important;
 }
 
-.content {
+.container {
     margin-top: 2em;
-    border: solid blue 10px;
+    border: solid blue 6px;
     border-radius: 20px;
     width: auto;
+    padding: 1em;
+}
+
+.container h1 {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+table {
+    font-size: x-large;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 0.5em;
+}
+
+.thumbnail {
+    max-width: 24em;
+}
+
+.fullNote {
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 1em;
+}
+
+.larger {
+    font-size: xx-large;
 }

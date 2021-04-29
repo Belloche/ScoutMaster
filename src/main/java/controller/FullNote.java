@@ -1,5 +1,8 @@
 package controller;
 
+import entity.Note;
+import persistence.GenericDao;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,6 +17,12 @@ import java.io.IOException;
 public class FullNote extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        GenericDao dao = new GenericDao(Note.class);
+
+        int noteParam = Integer.parseInt(req.getParameter("id"));
+
+        req.setAttribute("note", dao.getById(noteParam));
+
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/fullNote.jsp");
         dispatcher.forward(req, res);
     }
