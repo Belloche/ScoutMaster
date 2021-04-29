@@ -15,6 +15,7 @@
 </head>
 <body>
     <c:import url="nav.jsp" />
+
     <div class="container bg-white">
         <div class="row text-center">
             <div class="col-12">
