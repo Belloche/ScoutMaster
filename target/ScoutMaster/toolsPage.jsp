@@ -14,10 +14,45 @@
     <c:import url="bootstrap.jsp" />
 </head>
 <body>
-    <nav class="navBar">
-        <b><a href="/ScoutMaster_war/home" class="navTransition">Scout Master</a></b>
-        <a href="/ScoutMaster_war/newNote" class="navTransition">New Note</a>
-        <button href="/ScoutMaster_war/logout" class="btn btn-danger">Logout</button>
-    </nav>
+    <c:import url="nav.jsp" />
+    <div class="container bg-white" align="center">
+        <h1>Scout Master Tools</h1>
+        <div class="row">
+            <div class="col-sm">
+                <h3>Note Tools</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <p>Use New Prospect to insert a new note on an NFL prospect, or use Delete a Note to remove a note from the database.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <a href="/ScoutMaster_war/noteCreator"><button class="btn btn-primary mb-2">New Prospect</button></a>
+            </div>
+            <div class="col-sm">
+                <a href="/ScoutMaster_war/deleteNote"><button class="btn btn-success mb-2">Delete a Note</button></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <h3>Credential Tools</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <p>To view your username and password click View/Change Credentials, or click Log Out to log out of ScoutMaster.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <a href="/ScoutMaster_war/viewCredentials"><button class="btn btn-danger mb-2">View/Change Credentials</button></a>
+            </div>
+            <div class="col-sm">
+                <a href="/ScoutMaster_war/logOut.jsp"><button class="btn btn-danger mb-2">Log Out</button></a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

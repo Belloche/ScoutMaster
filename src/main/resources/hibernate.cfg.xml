@@ -18,8 +18,8 @@
         <property name="hibernate.c3p0.idle_test_period">3000</property>
         <property name="dialect">org.hibernate.dialect.H2Dialect</property>
 
-        <mapping class="entity.Admin" />
-        <mapping class="entity.Note" />
+        <mapping class="student.entity.Admin" />
+        <mapping class="student.entity.Note" />
 
 
     </session-factory>

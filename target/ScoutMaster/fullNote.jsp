@@ -15,6 +15,7 @@
 </head>
 <body>
     <c:import url="nav.jsp" />
+
     <div class="container bg-white">
         <div class="row text-center">
             <div class="col-12">
@@ -46,7 +47,9 @@
             </div>
         </div>
         <h3 class="text-center">Report</h3>
-        <p>${note.getReport()}</p>
+        <p class="text-center">${note.getReport()}</p>
+        <br />
+        <a href="/ScoutMaster_war/home"><button class="btn btn-primary">Go Back</button></a>
     </div>
 </body>
 </html>
