@@ -35,6 +35,9 @@
                 <a href="/ScoutMaster_war/deleteNote"><button class="btn btn-success mb-2">Delete a Note</button></a>
             </div>
         </div>
+
+        <br /><br />
+
         <div class="row">
             <div class="col-sm">
                 <h3>Credential Tools</h3>
