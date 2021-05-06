@@ -51,5 +51,6 @@
         <br />
         <a href="/ScoutMaster_war/home"><button class="btn btn-primary">Go Back</button></a>
     </div>
+    <c:import url="footer.jsp" />
 </body>
 </html>

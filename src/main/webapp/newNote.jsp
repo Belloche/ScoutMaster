@@ -73,5 +73,6 @@
             <button type="submit" class="btn btn-primary">Submit Note</button>
         </form>
     </div>
+    <c:import url="footer.jsp" />
 </body>
 </html>

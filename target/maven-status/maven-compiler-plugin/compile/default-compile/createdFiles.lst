@@ -1,4 +1,5 @@
 student/persistence/SessionFactoryProvider.class
+student/controller/ResetSearch.class
 student/controller/SearchNotes.class
 student/persistence/GenericDao.class
 student/entity/Note.class

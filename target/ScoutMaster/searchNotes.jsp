@@ -26,7 +26,7 @@
             <fieldset class="form-group">
                 <div class="row">
                     <legend class="col-form-label">Search Types</legend>
-                    <div class="col-sm-10">
+                    <div class="col-sm-5">
                         <div class="form-check">
                             <input type="radio" name="typeRadios" id="typeRadioName" class="form-check-input" value="prospect" required />
                             <label for="typeRadioName" class="form-check-label" ${prospectSelected}>Name</label>
@@ -40,6 +40,10 @@
                             <label for="typeRadioPosition" class="form-check-label" ${positionSelected}>Position</label>
                         </div>
                     </div>
+                    <div class="col-sm-5">
+                        <h3>For Accurate Results</h3>
+                        <p>Make sure you enter the right name and <b>full name</b> of the university you are looking up (for example, the Crimson Tide play at University of Alabama at Tuscaloosa). Positions should be 2 letters</p>
+                    </div>
                 </div>
             </fieldset>
             <div class="form-group row">
@@ -49,20 +53,52 @@
             </div>
         </form>
     </div>
-    <div class="container bg-white">
-        <h2>Search Results</h2>
+
         <c:choose>
             <c:when test="${not empty emptySearch}">
+            <div class="container bg-white">
+                <h2>Search Results</h2>
                 <p>This is where your search results will display</p>
+            </div>
+            </c:when>
+            <c:when test="${not empty emptyResults}">
+            <div class="container bg-white">
+                <h2>Search Results</h2>
+                <div class="container">
+                    <h3>No results found</h3>
+                    <p>Looks like there weren't any notes that match your search</p>
+                </div>
+            </div>
             </c:when>
             <c:when test="${!not empty emptySearch}">
-                <c:forEach var="note" items="results">
+                <c:forEach var="note" items="${results}">
                     <div class="container bg-white">
-                        Working!
+                        <h2>Search Results</h2>
+                        <div class="container bg-white thumbnail">
+                            <table>
+                                <tr>
+                                    <td>Name</td>
+                                    <th>${note.getProspect()}</th>
+                                </tr>
+                                <tr>
+                                    <td>Position</td>
+                                    <td>${note.getPosition()}</td>
+                                </tr>
+                                <tr>
+                                    <td>College</td>
+                                    <td>${note.getCollege()}</td>
+                                </tr>
+                                <tr>
+                                    <td>Rating</td>
+                                    <td><b>${note.getRating()}</b></td>
+                                </tr>
+                            </table>
+                            <a href="fullNote?id=${note.getId()}">View Report</a>
+                        </div>
                     </div>
                 </c:forEach>
             </c:when>
         </c:choose>
-    </div>
+    <c:import url="footer.jsp" />
 </body>
 </html>

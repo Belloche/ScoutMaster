@@ -1,5 +1,11 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body {
     background-color: #b3f0ff;
+    margin: 0 0 100px;
 }
 
 .navBar {
@@ -44,7 +50,7 @@ td {
 }
 
 .thumbnail {
-    max-width: 24em;
+    max-width: 35em;
 }
 
 .fullNote {
@@ -55,4 +61,14 @@ td {
 
 .larger {
     font-size: xx-large;
+}
+
+footer {
+    position: absolute;
+    background-color: #3399FF;
+    color: white;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
 }

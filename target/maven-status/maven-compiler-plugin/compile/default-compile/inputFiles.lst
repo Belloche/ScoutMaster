@@ -4,6 +4,7 @@
 /home/student/IdeaProjects/ScoutMaster/src/main/java/student/persistence/SessionFactoryProvider.java
 /home/student/IdeaProjects/ScoutMaster/src/main/java/student/controller/Tools.java
 /home/student/IdeaProjects/ScoutMaster/src/main/java/student/persistence/Database.java
+/home/student/IdeaProjects/ScoutMaster/src/main/java/student/controller/ResetSearch.java
 /home/student/IdeaProjects/ScoutMaster/src/main/java/student/entity/Admin.java
 /home/student/IdeaProjects/ScoutMaster/src/main/java/student/entity/Note.java
 /home/student/IdeaProjects/ScoutMaster/src/main/java/student/controller/SearchNotes.java

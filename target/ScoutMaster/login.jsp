@@ -29,5 +29,6 @@
             <button type="submit" class="btn btn-primary mb-2">Log In</button>
         </form>
     </div>
+    <c:import url="footer.jsp" />
 </body>
 </html>
