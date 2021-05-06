@@ -17,6 +17,14 @@
     <c:import url="nav.jsp" />
     <div class="container bg-white" align="center">
         <h1>Scout Master Tools</h1>
+
+        <c:if test="${not empty deleted}">
+            <div class="alert alert-success">
+                <h3 class="alert-heading">Success!</h3>
+                <p>Your note was deleted successfully</p>
+            </div>
+        </c:if>
+
         <div class="row">
             <div class="col-sm">
                 <h3>Note Tools</h3>
@@ -32,7 +40,7 @@
                 <a href="/ScoutMaster_war/noteCreator"><button class="btn btn-primary mb-2">New Prospect</button></a>
             </div>
             <div class="col-sm">
-                <a href="/ScoutMaster_war/deleteNote"><button class="btn btn-danger mb-2">Delete a Note</button></a>
+                <a href="/ScoutMaster_war/chooseNote"><button class="btn btn-danger mb-2">Delete a Note</button></a>
             </div>
         </div>
 

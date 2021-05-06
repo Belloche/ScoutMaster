@@ -15,7 +15,7 @@
 </head>
 <body>
     <c:import url="nav.jsp" />
-    <div class="container bg-white justify-content-center">
+    <div class="container bg-white" align="center">
         <c:if test="${passwordChanged.equals('true')}">
             <div class="alert alert-success">
                 <h3 class="alert-heading">Password Changed Successfully</h3>

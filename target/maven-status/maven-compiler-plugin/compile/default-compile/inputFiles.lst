@@ -3,9 +3,12 @@
 /home/student/IdeaProjects/ScoutMaster/src/main/java/student/controller/ResetSearch.java
 /home/student/IdeaProjects/ScoutMaster/src/main/java/student/entity/Note.java
 /home/student/IdeaProjects/ScoutMaster/src/main/java/student/controller/NewNote.java
+/home/student/IdeaProjects/ScoutMaster/src/main/java/student/controller/DeleteNote.java
 /home/student/IdeaProjects/ScoutMaster/src/main/java/student/controller/FullNote.java
+/home/student/IdeaProjects/ScoutMaster/src/main/java/student/controller/ConfirmDelete.java
 /home/student/IdeaProjects/ScoutMaster/src/main/java/student/controller/ViewCredentials.java
 /home/student/IdeaProjects/ScoutMaster/src/main/java/student/persistence/GenericDao.java
+/home/student/IdeaProjects/ScoutMaster/src/main/java/student/controller/ChooseNote.java
 /home/student/IdeaProjects/ScoutMaster/src/main/java/student/controller/PasswordReset.java
 /home/student/IdeaProjects/ScoutMaster/src/main/java/student/persistence/SessionFactoryProvider.java
 /home/student/IdeaProjects/ScoutMaster/src/main/java/student/controller/Tools.java

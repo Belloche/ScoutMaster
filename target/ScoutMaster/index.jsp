@@ -12,12 +12,10 @@
             draft, so you can look up what I think about potential draft picks. I'll give their measurables and notes
             I have on how they play.</p>
     </div>
-        <c:set var="i" value="${1}" />
+
+    <div class="row">
         <c:forEach var="note" items="${notes}">
-            <c:if test="${i == 1}">
-                <div class="row">
-            </c:if>
-            <div class="container bg-white thumbnail col-md-3">
+            <div class="container bg-white thumbnail col-md-4">
                 <table>
                     <tr>
                         <td>Name</td>
@@ -38,18 +36,8 @@
                 </table>
                 <a href="fullNote?id=${note.getId()}">View Report</a>
             </div>
-            <c:choose>
-                <c:when test="${i ==2}">
-                    </div>
-                    <c:set var="i" value="${1}" />
-                </c:when>
-                <c:when test="${i == 1}">
-                    <c:set var="i" value="${2}" />
-                </c:when>
-            </c:choose>
         </c:forEach>
-
-
-</body>
+    </div>
 <c:import url="footer.jsp" />
+</body>
 </html>

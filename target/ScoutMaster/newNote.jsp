@@ -16,6 +16,7 @@
 <body>
     <c:import url="nav.jsp" />
     <div class="container bg-white">
+        <h1>New Note</h1>
         <form action="newNote">
             <div class="form-group">
                 <label for="prospect">Prospect Name</label>

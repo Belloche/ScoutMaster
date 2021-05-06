@@ -49,7 +49,7 @@
         <h3 class="text-center">Report</h3>
         <p class="text-center">${note.getReport()}</p>
         <br />
-        <a href="/ScoutMaster_war/home"><button class="btn btn-primary">Go Back</button></a>
+        <a href="/ScoutMaster_war/home"><button class="btn btn-primary">Back to Home</button></a>
     </div>
     <c:import url="footer.jsp" />
 </body>

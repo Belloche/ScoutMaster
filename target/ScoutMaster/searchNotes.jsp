@@ -28,16 +28,16 @@
                     <legend class="col-form-label">Search Types</legend>
                     <div class="col-sm-5">
                         <div class="form-check">
-                            <input type="radio" name="typeRadios" id="typeRadioName" class="form-check-input" value="prospect" required />
-                            <label for="typeRadioName" class="form-check-label" ${prospectSelected}>Name</label>
+                            <input type="radio" name="typeRadios" id="typeRadioName" class="form-check-input" value="prospect" ${prospectSelected} required />
+                            <label for="typeRadioName" class="form-check-label">Name</label>
                         </div>
                         <div class="form-check">
-                            <input type="radio" name="typeRadios" id="typeRadioCollege" class="form-check-input" value="college" />
-                            <label for="typeRadioCollege" class="form-check-label" ${collegeSelected}>College</label>
+                            <input type="radio" name="typeRadios" id="typeRadioCollege" class="form-check-input" value="college" ${collegeSelected} />
+                            <label for="typeRadioCollege" class="form-check-label">College</label>
                         </div>
                         <div class="form-check">
-                            <input type="radio" name="typeRadios" id="typeRadioPosition" class="form-check-input" value="position" />
-                            <label for="typeRadioPosition" class="form-check-label" ${positionSelected}>Position</label>
+                            <input type="radio" name="typeRadios" id="typeRadioPosition" class="form-check-input" value="position" ${positionSelected} />
+                            <label for="typeRadioPosition" class="form-check-label">Position</label>
                         </div>
                     </div>
                     <div class="col-sm-5">

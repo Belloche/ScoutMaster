@@ -41,6 +41,11 @@ public class SearchNotes extends HttpServlet {
 
             req.setAttribute("results", results);
             req.setAttribute("term", searchTerm);
+        } else {
+            req.setAttribute("emptySearch", "true");
+        }
+
+        if (searchType != null) {
             if (searchType.equals("prospect")) {
                 req.setAttribute("prospectSelected", "checked");
             } else if (searchType.equals("college")) {
@@ -48,8 +53,6 @@ public class SearchNotes extends HttpServlet {
             } else if (searchType.equals("position")) {
                 req.setAttribute("positionSelected", "checked");
             }
-        } else {
-            req.setAttribute("emptySearch", "true");
         }
 
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/searchNotes.jsp");
