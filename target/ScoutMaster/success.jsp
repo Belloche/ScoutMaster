@@ -19,7 +19,7 @@
         <h2>Success!</h2>
         <p>The report was created!</p>
         <p>If you would like to view the note click <a href="fullNote?id=${id}">Here</a></p>
-        <p>To go back to the homepage click <a href="/home">Here</a></p>
+        <p>To go back to the homepage click <a href="/ScoutMaster_war/home">Here</a></p>
     </div>
     <c:import url="footer.jsp" />
 </body>
