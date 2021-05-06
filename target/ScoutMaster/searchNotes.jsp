@@ -71,9 +71,9 @@
             </div>
             </c:when>
             <c:when test="${!not empty emptySearch}">
-                <c:forEach var="note" items="${results}">
-                    <div class="container bg-white">
-                        <h2>Search Results</h2>
+                <div class="container bg-white">
+                <h2>Search Results</h2>
+                    <c:forEach var="note" items="${results}">
                         <div class="container bg-white thumbnail">
                             <table>
                                 <tr>
@@ -95,8 +95,8 @@
                             </table>
                             <a href="fullNote?id=${note.getId()}">View Report</a>
                         </div>
-                    </div>
-                </c:forEach>
+                    </c:forEach>
+                </div>
             </c:when>
         </c:choose>
     <c:import url="footer.jsp" />
