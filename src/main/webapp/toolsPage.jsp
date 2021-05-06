@@ -32,7 +32,7 @@
                 <a href="/ScoutMaster_war/noteCreator"><button class="btn btn-primary mb-2">New Prospect</button></a>
             </div>
             <div class="col-sm">
-                <a href="/ScoutMaster_war/deleteNote"><button class="btn btn-success mb-2">Delete a Note</button></a>
+                <a href="/ScoutMaster_war/deleteNote"><button class="btn btn-danger mb-2">Delete a Note</button></a>
             </div>
         </div>
 
@@ -50,7 +50,7 @@
         </div>
         <div class="row">
             <div class="col-sm">
-                <a href="/ScoutMaster_war/viewCredentials"><button class="btn btn-danger mb-2">View/Change Credentials</button></a>
+                <a href="/ScoutMaster_war/viewCredentials"><button class="btn btn-primary mb-2">View Credentials</button></a>
             </div>
             <div class="col-sm">
                 <a href="/ScoutMaster_war/logOut.jsp"><button class="btn btn-danger mb-2">Log Out</button></a>

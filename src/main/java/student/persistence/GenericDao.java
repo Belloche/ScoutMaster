@@ -39,6 +39,22 @@ public class GenericDao<T> {
         return id;
     }
 
+    public void delete(T entity) {
+        Session session = getSession();
+        Transaction transaction = session.beginTransaction();
+        session.delete(entity);
+        transaction.commit();
+        session.close();
+    }
+
+    public void saveOrUpdate(T object) {
+        Session session = getSession();
+        Transaction transaction = session.beginTransaction();
+        session.saveOrUpdate(object);
+        transaction.commit();
+        session.close();
+    }
+
     public List<T> findByPropertyEqual(String propertyName, Object value) {
         Session session = getSession();
         CriteriaBuilder builder = session.getCriteriaBuilder();
