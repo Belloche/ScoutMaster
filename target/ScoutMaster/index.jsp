@@ -1,10 +1,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<html>
+<html lang="en">
 <title>Scout Master</title>
 <link rel="stylesheet" href="master.css">
 <c:import url="bootstrap.jsp" />
-<body>
-<c:import url="nav.jsp" />
+<main>
+    <body>
+    <c:import url="nav.jsp" />
 
     <div class="container bg-white">
         <h1>Welcome to ScoutMaster</h1>
@@ -34,10 +35,11 @@
                         <td><b>${note.getRating()}</b></td>
                     </tr>
                 </table>
-                <a href="fullNote?id=${note.getId()}">View Report</a>
+                <a href="fullNote?id=${note.getId()}" class="blueLink">View Report</a>
             </div>
         </c:forEach>
     </div>
-<c:import url="footer.jsp" />
-</body>
+    <c:import url="footer.jsp" />
+    </body>
+</main>
 </html>

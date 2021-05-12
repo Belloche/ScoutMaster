@@ -11,6 +11,7 @@ student/controller/NewNote.class
 student/entity/Admin.class
 student/persistence/Database.class
 student/controller/Homepage.class
+student/controller/LogOut.class
 student/controller/FullNote.class
 student/controller/Tools.class
 student/controller/GetCreator.class

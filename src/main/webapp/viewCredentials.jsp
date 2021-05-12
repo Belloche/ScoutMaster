@@ -7,13 +7,14 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<html lang="en">
 <head>
     <title>ScoutMaster - View Credentials</title>
     <link rel="stylesheet" href="master.css" />
     <c:import url="bootstrap.jsp" />
 </head>
-<body>
+<main>
+    <body>
     <c:import url="nav.jsp" />
     <div class="container bg-white" align="center">
         <c:if test="${passwordChanged.equals('true')}">
@@ -29,5 +30,6 @@
         <a href="/ScoutMaster_war/changePassword.jsp"><button class="btn btn-danger">Change Password</button></a>
     </div>
     <c:import url="footer.jsp" />
-</body>
+    </body>
+</main>
 </html>

@@ -7,21 +7,22 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<html lang="en">
 <head>
     <title>DraftShare - Logged Out</title>
     <link rel="stylesheet" href="master.css" />
     <c:import url="bootstrap.jsp" />
 </head>
-<body>
+<main>
+    <body>
     <c:import url="nav.jsp" />
 
     <div class="container bg-white">
-        <% session.invalidate(); %>
         <h1>You are logged out</h1>
-        <p>Click <a href="/ScoutMaster_war/home">here</a> to go back to the homepage</p>
+        <p>Click <a href="/ScoutMaster_war/home" class="blueLink" role="home">here</a> to go back to the homepage</p>
     </div>
 
     <c:import url="footer.jsp" />
-</body>
+    </body>
+</main>
 </html>

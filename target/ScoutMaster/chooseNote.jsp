@@ -7,14 +7,15 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<html lang="en">
 <head>
     <title>ScoutMaster - Choose a Note</title>
     <link rel="stylesheet" href="master.css">
     <c:import url="bootstrap.jsp" />
 </head>
-<body>
-<c:import url="nav.jsp" />
+<main>
+    <body>
+    <c:import url="nav.jsp" />
 
     <div class="container bg-white">
         <h1>Choose a Note to Delete</h1>
@@ -39,13 +40,14 @@
                         <td><b>${note.getRating()}</b></td>
                     </tr>
                 </table>
-                <a href="fullNote?id=${note.getId()}">View Report</a>
+                <a href="fullNote?id=${note.getId()}" class="blueLink">View Report</a>
                 <br />
-                <a href="confirm?id=${note.getId()}"><button class="btn btn-danger">Delete Note</button></a>
+                <a href="confirm?id=${note.getId()}"><button class="btn btn-danger mt-2">Delete Note</button></a>
             </div>
         </c:forEach>
     </div>
 
-<c:import url="footer.jsp" />
-</body>
+    <c:import url="footer.jsp" />
+    </body>
+</main>
 </html>

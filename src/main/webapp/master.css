@@ -11,7 +11,7 @@ body {
 .navBar {
     overflow: hidden;
     text-decoration: none;
-    background-color: #3399ff;
+    background-color: #0055B3;
 }
 
 .navBar a {
@@ -23,7 +23,7 @@ body {
 }
 .navTransition:hover {
     transition: 0.2s;
-    background-color: blue;
+    background-color: #00428A;
     color: white !important;
 }
 
@@ -65,10 +65,84 @@ td {
 
 footer {
     position: absolute;
-    background-color: #3399FF;
+    background-color: #0055B3;
     color: white;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 5rem;
+}
+
+.blueLink {
+    color: #0054B3;
+}
+
+.btn-primary {
+    background-color: #0054B3;
+}
+
+.btn-success {
+    background-color: #17631D;
+}
+
+#sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #003F85;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+#sidebar a, #sidebar b {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+#sidebar .closeButton {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openButton {
+    cursor: pointer;
+    background-color: #00428A;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.hamburger {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+@media (max-width: 767px) {
+    .collapseNav {
+        display: none;
+    }
+    .openButton {
+        display: block;
+    }
+}
+@media (min-width: 768px) {
+    .collapseNav {
+        display: block;
+    }
+    .openButton {
+        display: none;
+    }
 }

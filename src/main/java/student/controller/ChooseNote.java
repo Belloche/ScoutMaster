@@ -13,6 +13,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Servlet for choosing which note to delete by setting all notes as the "notes" attribute
+ * and forwarding to chooseNote.jsp
+ * @author Zane Miller
+ * @version 1.0 5-11-2021
+ */
 @WebServlet(
         urlPatterns = "/chooseNote"
 )

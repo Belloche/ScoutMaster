@@ -7,16 +7,17 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<html lang="en">
 <head>
     <title>Scout Master - Login</title>
     <link rel="stylesheet" href="master.css" />
     <c:import url="bootstrap.jsp" />
 </head>
-<body>
+<main>
+    <body>
     <c:import url="nav.jsp" />
     <div class="container bg-white">
-        <h2>Login</h2>
+        <h1>Login</h1>
         <form action="j_security_check">
             <div class="form-group">
                 <label for="username">Username</label>
@@ -30,5 +31,6 @@
         </form>
     </div>
     <c:import url="footer.jsp" />
-</body>
+    </body>
+</main>
 </html>

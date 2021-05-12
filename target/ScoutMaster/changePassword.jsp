@@ -7,18 +7,20 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<html lang="en">
 <head>
     <title>ScoutMaster - Change Password</title>
     <link rel="stylesheet" href="master.css" />
     <c:import url="bootstrap.jsp" />
 </head>
-<body>
+<main>
+    <body>
     <c:import url="nav.jsp" />
     <div class="container bg-white">
+        <h1 class="text-center">Change Your Password</h1>
         <c:if test="${incorrect.equals('true')}">
             <div class="alert alert-danger">
-                <h4 class="alert-heading">Incorrect Password</h4>
+                <h2 class="alert-heading">Incorrect Password</h2>
                 <p>Make sure your old password is correct</p>
             </div>
         </c:if>
@@ -35,5 +37,6 @@
         </form>
     </div>
     <c:import url="footer.jsp" />
-</body>
+    </body>
+</main>
 </html>

@@ -7,20 +7,22 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<html lang="en">
 <head>
     <title>ScoutMaster - Note Added</title>
     <link rel="stylesheet" href="master.css">
     <c:import url="bootstrap.jsp" />
 </head>
-<body>
+<main>
+    <body>
     <c:import url="nav.jsp" />
     <div class="container bg-white">
-        <h2>Success!</h2>
+        <h1>Success!</h1>
         <p>The report was created!</p>
-        <p>If you would like to view the note click <a href="fullNote?id=${id}">Here</a></p>
-        <p>To go back to the homepage click <a href="/ScoutMaster_war/home">Here</a></p>
+        <p>If you would like to view the note click <a href="fullNote?id=${id}" class="blueLink" role="view note">Here</a></p>
+        <p>To go back to the homepage click <a href="/ScoutMaster_war/home" class="blueLink" role="home">Here</a></p>
     </div>
     <c:import url="footer.jsp" />
-</body>
+    </body>
+</main>
 </html>

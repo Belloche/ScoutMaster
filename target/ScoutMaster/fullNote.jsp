@@ -7,13 +7,14 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<html lang="en">
 <head>
     <title>Scout Master - Full Note</title>
     <link rel="stylesheet" href="master.css" />
     <c:import url="bootstrap.jsp" />
 </head>
-<body>
+<main>
+    <body>
     <c:import url="nav.jsp" />
 
     <div class="container bg-white">
@@ -24,33 +25,34 @@
         </div>
         <div class="row text-center">
             <div class="col">
-                <h4>Position - ${note.getPosition()}</h4>
+                <p>Position - ${note.getPosition()}</p>
             </div>
             <div class="col">
-                <h4>College - ${note.getCollege()}</h4>
+                <p>College - ${note.getCollege()}</p>
             </div>
         </div>
         <div class="row text-center">
             <div class="col">
-                <h4>Height - ${note.getHeightFeet()}'${note.getHeightInches()}"</h4>
+                <p>Height - ${note.getHeightFeet()}'${note.getHeightInches()}"</p>
             </div>
             <div class="col">
-                <h4>Weight - ${note.getWeight()} lbs</h4>
+                <p>Weight - ${note.getWeight()} lbs</p>
             </div>
         </div>
         <div class="row text-center">
             <div class="col">
-                <h4>Rating - ${note.getRating()}</h4>
+                <p>Rating - ${note.getRating()}</p>
             </div>
             <div class="col">
-                <h4>Age - ${note.getAge()}</h4>
+                <p>Age - ${note.getAge()}</p>
             </div>
         </div>
-        <h3 class="text-center">Report</h3>
+        <h2 class="text-center">Report</h2>
         <p class="text-center">${note.getReport()}</p>
         <br />
         <a href="/ScoutMaster_war/home"><button class="btn btn-primary">Back to Home</button></a>
     </div>
     <c:import url="footer.jsp" />
-</body>
+    </body>
+</main>
 </html>

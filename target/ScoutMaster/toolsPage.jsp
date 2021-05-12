@@ -7,27 +7,28 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<html lang="en">
 <head>
     <title>ScoutMaster - Tools Page</title>
     <link rel="stylesheet" href="master.css" />
     <c:import url="bootstrap.jsp" />
 </head>
-<body>
+<main>
+    <body>
     <c:import url="nav.jsp" />
     <div class="container bg-white" align="center">
         <h1>Scout Master Tools</h1>
 
         <c:if test="${not empty deleted}">
             <div class="alert alert-success">
-                <h3 class="alert-heading">Success!</h3>
+                <h2 class="alert-heading">Success!</h2>
                 <p>Your note was deleted successfully</p>
             </div>
         </c:if>
 
         <div class="row">
             <div class="col-sm">
-                <h3>Note Tools</h3>
+                <h2>Note Tools</h2>
             </div>
         </div>
         <div class="row">
@@ -61,10 +62,11 @@
                 <a href="/ScoutMaster_war/viewCredentials"><button class="btn btn-primary mb-2">View Credentials</button></a>
             </div>
             <div class="col-sm">
-                <a href="/ScoutMaster_war/logOut.jsp"><button class="btn btn-danger mb-2">Log Out</button></a>
+                <a href="/ScoutMaster_war/logOut"><button class="btn btn-danger mb-2">Log Out</button></a>
             </div>
         </div>
     </div>
     <c:import url="footer.jsp" />
-</body>
+    </body>
+</main>
 </html>
