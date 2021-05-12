@@ -10,8 +10,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
+/**
+ * Servlet that retrieves the admin from the DB, sets it as the "admin" attribute and forwards to toolsPage.jsp
+ * @author Zane Miller
+ * @version 1.0 5-12-2021
+ */
 @WebServlet(
         urlPatterns = "/toolsPage"
 )
@@ -19,14 +23,9 @@ public class Tools extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         GenericDao dao = new GenericDao(Admin.class);
-        Admin retrievedAdmin = null;
+        Admin admin = (Admin) dao.getById(1);
 
-        List<Admin> adminList = dao.findByPropertyEqual("username", req.getUserPrincipal().getName());
-        for (Admin admin : adminList) {
-            retrievedAdmin = admin;
-        }
-
-        req.setAttribute("admin", retrievedAdmin);
+        req.setAttribute("admin", admin);
 
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/toolsPage.jsp");
         dispatcher.forward(req, res);

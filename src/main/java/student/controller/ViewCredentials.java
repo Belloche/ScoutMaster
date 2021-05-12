@@ -13,6 +13,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Servlet that retrieves the admin from the database, sets it as the "credentials" attribute and forwards to
+ * viewCredentials.jsp
+ * @author Zane Miller
+ * @version 1.0 5-12-2021
+ */
 @WebServlet(
         urlPatterns = "/viewCredentials"
 )

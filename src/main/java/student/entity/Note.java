@@ -8,6 +8,11 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
+/**
+ * The Entity Note with id, userId, and prospect details for displaying on fullNote
+ * @author Zane Miller
+ * @version 1.0 5-12-2021
+ */
 @Entity(name = "Note")
 @Table(name = "notes")
 @Getter

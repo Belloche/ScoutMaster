@@ -8,6 +8,11 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 
+/**
+ * The Entity Admin with id, password and username
+ * @author Zane Miller
+ * @version 1.0 5-12-2021
+ */
 @Entity(name = "Admin")
 @Table(name = "admin")
 @Getter
