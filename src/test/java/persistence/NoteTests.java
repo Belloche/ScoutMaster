@@ -10,9 +10,20 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
+/**
+ * The Unit Tests for the Note Entity
+ * @author Zane Miller
+ * @version 1.0 5-12-2021
+ */
 public class NoteTests {
+    /**
+     * The Note dao using the GenericDAO
+     */
     GenericDao noteDao;
 
+    /**
+     * Sets up the database before each test
+     */
     @BeforeEach
     void setUp() {
         Database database = Database.getInstance();
@@ -21,6 +32,9 @@ public class NoteTests {
         noteDao = new GenericDao(Note.class);
     }
 
+    /**
+     * Tests that a note was successfully retrieved from the database by id
+     */
     @Test
     void getNoteByIdSuccess() {
         Note retrievedNote = (Note) noteDao.getById(1);
@@ -28,6 +42,9 @@ public class NoteTests {
         assertEquals("Amari Rodgers", retrievedNote.getProspect());
     }
 
+    /**
+     * Tests that a note was inserted successfully
+     */
     @Test
     void insertNoteSuccess() {
         Note newNote = new Note();
@@ -58,12 +75,18 @@ public class NoteTests {
         assertEquals("7/10", insertedNote.getRating());
     }
 
+    /**
+     * Tests that a Note was deleted from the database successfully
+     */
     @Test
     void deleteNoteSuccess() {
         noteDao.delete(noteDao.getById(2));
         assertNull(noteDao.getById(2));
     }
 
+    /**
+     * Tests that all notes were retrieved from the database successfully
+     */
     @Test
     void getAllNotesSuccess() {
         List<Note> notes = noteDao.getAll();

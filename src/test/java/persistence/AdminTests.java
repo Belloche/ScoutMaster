@@ -14,12 +14,12 @@ import static org.junit.Assert.*;
  */
 public class AdminTests {
     /**
-     * The Admin dao.
+     * The Admin dao using the GenericDAO
      */
     GenericDao adminDao;
 
     /**
-     * Sets up.
+     * Sets up the database before each test
      */
     @BeforeEach
     void setUp() {
@@ -30,7 +30,7 @@ public class AdminTests {
     }
 
     /**
-     * Gets admin by id success.
+     * Tests that a admin was successfully retrieved from the database by id
      */
     @Test
     void getAdminByIdSuccess() {
@@ -41,7 +41,7 @@ public class AdminTests {
     }
 
     /**
-     * Update admin password success.
+     * Tests that the password of the admin was updated successfully
      */
     @Test
     void updateAdminPasswordSuccess() {
