@@ -43,7 +43,7 @@
                     </div>
                     <div class="col-sm-5">
                         <h2>For Accurate Results</h2>
-                        <p>Make sure you enter the right name and <b>full name</b> of the university you are looking up (for example, the Crimson Tide play at University of Alabama at Tuscaloosa). Positions should be 2 letters</p>
+                        <p>Make sure you enter the right name and <b>full name</b> of the university or prospect you are looking up (for example, the Crimson Tide play at University of Alabama at Tuscaloosa). Positions should be 2 letters</p>
                     </div>
                 </div>
             </fieldset>

@@ -1,6 +1,5 @@
 student/persistence/SessionFactoryProvider.class
 student/controller/ConfirmDelete.class
-student/controller/ResetSearch.class
 student/controller/ChooseNote.class
 student/controller/PasswordReset.class
 student/controller/SearchNotes.class
