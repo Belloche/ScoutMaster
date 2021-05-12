@@ -3,7 +3,7 @@
   User: student
   Date: 4/29/21
   Time: 4:35 PM
-  To change this template use File | Settings | File Templates.
+  JSP with admin tools for creating and deleting notes, viewing credentials and logging out
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>

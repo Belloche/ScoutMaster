@@ -1,3 +1,6 @@
+<%--
+    JSP for viewing all notes on homepage
+--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
 <title>Scout Master</title>

@@ -3,7 +3,7 @@
   User: student
   Date: 5/6/21
   Time: 12:18 PM
-  To change this template use File | Settings | File Templates.
+  JSP for confirming delete of the specified note
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
