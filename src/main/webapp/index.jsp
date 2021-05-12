@@ -7,6 +7,13 @@
     <body>
     <c:import url="nav.jsp" />
 
+    <c:if test="${not empty loggedOut}">
+        <div class="alert alert-success" align="center">
+            <h2 class="alert-heading">Success!</h2>
+            <p>You have successfully logged out</p>
+        </div>
+    </c:if>
+
     <div class="container bg-white">
         <h1>Welcome to ScoutMaster</h1>
         <p>ScoutMaster is my personal NFL prospect notebook. I post regular updates on NFL prospects for the NFL

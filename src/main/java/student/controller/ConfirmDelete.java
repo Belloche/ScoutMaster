@@ -13,6 +13,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Servlet that takes the chosen draft the user would like to delete, sets it as the "note" attribute, then
+ * forwards to deleteNote.jsp
+ * @author Zane Miller
+ * @version 1.0 5-11-2021
+ */
 @WebServlet(
         urlPatterns = "/confirm"
 )

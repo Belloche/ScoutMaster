@@ -14,6 +14,13 @@
             I have on how they play.</p>
     </div>
 
+    <c:if test="${not empty loggedOut}">
+        <div class="alert alert-success" align="center">
+            <h2 class="alert-heading">Success!</h2>
+            <p>You have successfully logged out</p>
+        </div>
+    </c:if>
+
     <div class="row">
         <c:forEach var="note" items="${notes}">
             <div class="container bg-white thumbnail col-md-4">

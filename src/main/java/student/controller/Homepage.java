@@ -11,6 +11,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Servlet that calls getAll() on a dao of Notes entities, sets it as the "notes" attribute, and forwards to index.jsp
+ * @author Zane Miller
+ * @version 1.0 5-11-2021
+ */
 @WebServlet(
         urlPatterns = {"/home"}
 )

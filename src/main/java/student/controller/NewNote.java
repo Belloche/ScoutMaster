@@ -14,6 +14,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Servlet that creates a note with each form parameter, inserts it using the dao, sets an "id" attribute with the new
+ * Note's id for a fullNote link, and forwards to success.jsp
+ * @author Zane Miller
+ * @version 1.0 5-11-2021
+ */
 @WebServlet(
         urlPatterns = "/newNote"
 )

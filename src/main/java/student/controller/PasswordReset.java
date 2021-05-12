@@ -13,6 +13,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Servlet that checks to see if the entered oldPassword matches the user's old password, if it does it updates the
+ * user record in the database with the entered newPassword, sets the attribute "passwordChanged" to "true", and
+ * forwards to /viewCredentials for confirmation
+ * @author Zane Miller
+ * @version 1.0 5-11-2021
+ */
 @WebServlet(
         urlPatterns = "/changePassword"
 )

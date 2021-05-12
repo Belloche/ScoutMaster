@@ -14,6 +14,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Servlet that takes entered search parameters and uses the dao findByPropertyEqual() to query the database, then
+ * set the results in the "results" attribute. If the results were empty it sets the "emptyResults" attribute, if
+ * search is empty it sets the "emptySearch" attribute, and if a radio is checked and search term is set it sets it
+ * attributes to allow for sticky fields on searchNotes.jsp. After everything is done it forwards to searchNotes.jsp
+ * @author Zane Miller
+ * @version 1.0 5-11-2021
+ */
 @WebServlet(
         urlPatterns = "/search"
 )
@@ -26,9 +34,9 @@ public class SearchNotes extends HttpServlet {
         String searchType = req.getParameter("typeRadios");
         GenericDao dao = new GenericDao(Note.class);
         List<Note> results = null;
-        ResetSearch reset = new ResetSearch();
+//        ResetSearch reset = new ResetSearch();
 
-        reset.resetSearch(req);
+//        reset.resetSearch(req);
 
         if (searchTerm != null) {
             results = dao.findByPropertyEqual(searchType, searchTerm);

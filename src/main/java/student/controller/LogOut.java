@@ -12,6 +12,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+/**
+ * Servlet that invalidates the session to log the user out, and then forwards to /home with a confirmation attribute
+ * @author Zane Miller
+ * @version 1.0 5-11-2021
+ */
 @WebServlet(
         urlPatterns = "/logOut"
 )
@@ -22,7 +27,9 @@ public class LogOut extends HttpServlet {
         HttpSession session = req.getSession();
         session.invalidate();
 
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/logOut.jsp");
+        req.setAttribute("loggedOut", "true");
+
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/home");
         dispatcher.forward(req, res);
     }
 }

@@ -19,6 +19,12 @@ import java.net.URL;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
+/**
+ * Servlet that gets a url of the Hipolabs Universities List API, passes it to the getResults() method to get
+ * a SortedSet of college names, sets it as the "universities" attribute, then forwards to newNote.jsp
+ * @author Zane Miller
+ * @version 1.0 5-11-2021
+ */
 @WebServlet(
         urlPatterns = "/noteCreator"
 )
@@ -27,13 +33,31 @@ public class GetCreator extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+        URL url = new URL("http://universities.hipolabs.com/search?country=United%20States");
+        SortedSet<String> universities = getResults(url);
+
+        req.setAttribute("universities", universities);
+
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/newNote.jsp");
+        dispatcher.forward(req, res);
+    }
+
+    /**
+     * Takes a URL from doGet(), opens a connection, reads the results and puts them in a JSONArray, which is then
+     * looped through and each result is turned into a JSONObject, and each JSONObject has its name put in the
+     * universities SortedSet and returned to doGet()
+     *
+     * @param url the url of JSON objects
+     * @return the SortedSet of college names
+     */
+    public SortedSet<String> getResults(URL url) {
         HttpURLConnection connection;
         BufferedReader reader;
         String line;
         StringBuffer stringBuffer = new StringBuffer();
         SortedSet<String> universities = new TreeSet<String>();
+
         try {
-            URL url = new URL("http://universities.hipolabs.com/search?country=United%20States");
             connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
 
@@ -55,9 +79,6 @@ public class GetCreator extends HttpServlet {
             logger.error(exc);
         }
 
-        req.setAttribute("universities", universities);
-
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/newNote.jsp");
-        dispatcher.forward(req, res);
+        return universities;
     }
 }
