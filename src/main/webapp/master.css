@@ -130,6 +130,16 @@ footer {
     margin: 6px 0;
 }
 
+.skipLink {
+    position: absolute;
+    left: -1000px;
+}
+
+.skipLink:focus,
+.skipLink:active {
+    left: 0;
+}
+
 @media (max-width: 767px) {
     .collapseNav {
         display: none;

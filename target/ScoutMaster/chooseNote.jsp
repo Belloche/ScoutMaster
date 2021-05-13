@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="master.css">
     <c:import url="bootstrap.jsp" />
 </head>
-<main>
+<main id="mainContent">
     <body>
     <c:import url="nav.jsp" />
 

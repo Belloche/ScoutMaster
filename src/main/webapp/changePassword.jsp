@@ -13,26 +13,27 @@
     <link rel="stylesheet" href="master.css" />
     <c:import url="bootstrap.jsp" />
 </head>
-<main>
-    <body>
-    <c:import url="nav.jsp" />
-    <div class="container bg-white">
-        <h1 class="text-center">Change Your Password</h1>
+<a href="#mainContent" class="skipLink">Skip</a>
+<body>
+<c:import url="nav.jsp" />
+<div class="container bg-white">
+    <main id="mainContent">
+        <h1 class="text-center" tabindex="0">Change Your Password</h1>
         <c:if test="${incorrect.equals('true')}">
             <div class="alert alert-danger">
-                <h2 class="alert-heading">Incorrect Password</h2>
-                <p>Make sure your old password is correct</p>
+                <h2 class="alert-heading" tabindex="0">Incorrect Password</h2>
+                <p tabindex="0">Make sure your old password is correct</p>
             </div>
         </c:if>
         <form action="changePassword">
             <div class="form-group justify-content-center">
                 <label for="oldPassword">Old Password</label>
-                <input type="password" class="form-control" id="oldPassword" name="oldPassword" required />
+                <input type="password" class="form-control" id="oldPassword" name="oldPassword" tabindex="0" required />
 
                 <label for="newPassword">New Password</label>
-                <input type="password" pattern=".{8-32}" class="form-control" id="newPassword" name="newPassword" required />
+                <input type="password" pattern=".{8-32}" class="form-control" id="newPassword" name="newPassword" tabindex="0" required />
 
-                <button class="btn btn-success mb-2 mt-2" type="submit" id="submitChange">Change Password</button>
+                <button tabindex="0" class="btn btn-success mb-2 mt-2" type="submit" id="submitChange">Change Password</button>
             </div>
         </form>
     </div>

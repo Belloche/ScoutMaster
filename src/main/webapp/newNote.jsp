@@ -13,11 +13,12 @@
     <link rel="stylesheet" href="master.css">
     <c:import url="bootstrap.jsp" />
 </head>
-<main>
-    <body>
-    <c:import url="nav.jsp" />
+<a href="#mainContent" class="skipLink">Skip</a>
+<body>
+<c:import url="nav.jsp" />
+<main id="mainContent">
     <div class="container bg-white">
-        <h1>New Note</h1>
+        <h1 tabindex="0">New Note</h1>
         <form action="newNote">
             <div class="form-group">
                 <label for="prospect">Prospect Name</label>

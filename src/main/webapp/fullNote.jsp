@@ -13,44 +13,44 @@
     <link rel="stylesheet" href="master.css" />
     <c:import url="bootstrap.jsp" />
 </head>
-<main>
-    <body>
-    <c:import url="nav.jsp" />
-
+<a href="#mainContent" class="skipLink">Skip</a>
+<body>
+<c:import url="nav.jsp" />
+<main id="mainContent">
     <div class="container bg-white">
         <div class="row text-center">
             <div class="col-12">
-                <h1 class="text-center">${note.getProspect()}</h1>
+                <h1 class="text-center" tabindex="0">${note.getProspect()}</h1>
             </div>
         </div>
         <div class="row text-center">
             <div class="col">
-                <p>Position - ${note.getPosition()}</p>
+                <p tabindex="0">Position - ${note.getPosition()}</p>
             </div>
             <div class="col">
-                <p>College - ${note.getCollege()}</p>
+                <p tabindex="0">College - ${note.getCollege()}</p>
             </div>
         </div>
         <div class="row text-center">
             <div class="col">
-                <p>Height - ${note.getHeightFeet()}'${note.getHeightInches()}"</p>
+                <p tabindex="0">Height - ${note.getHeightFeet()}'${note.getHeightInches()}"</p>
             </div>
             <div class="col">
-                <p>Weight - ${note.getWeight()} lbs</p>
+                <p tabindex="0">Weight - ${note.getWeight()} lbs</p>
             </div>
         </div>
         <div class="row text-center">
             <div class="col">
-                <p>Rating - ${note.getRating()}</p>
+                <p tabindex="0">Rating - ${note.getRating()}</p>
             </div>
             <div class="col">
-                <p>Age - ${note.getAge()}</p>
+                <p tabindex="0">Age - ${note.getAge()}</p>
             </div>
         </div>
-        <h2 class="text-center">Report</h2>
-        <p class="text-center">${note.getReport()}</p>
+        <h2 class="text-center" tabindex="0">Report</h2>
+        <p class="text-center" tabindex="0">${note.getReport()}</p>
         <br />
-        <a href="/ScoutMaster_war/home"><button class="btn btn-primary">Back to Home</button></a>
+        <a href="/ScoutMaster_war/home" tabindex="0"><button class="btn btn-primary">Back to Home</button></a>
     </div>
     <c:import url="footer.jsp" />
     </body>

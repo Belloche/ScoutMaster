@@ -13,27 +13,28 @@
     <link rel="stylesheet" href="master.css" />
     <c:import url="bootstrap.jsp" />
 </head>
-<main>
-    <body>
-    <c:import url="nav.jsp" />
+<a href="#mainContent" class="skipLink">Skip</a>
+<body>
+<c:import url="nav.jsp" />
+<main id="mainContent">
     <div class="container bg-white" align="center">
-        <h1>Scout Master Tools</h1>
+        <h1 tabindex="0">Scout Master Tools</h1>
 
         <c:if test="${not empty deleted}">
             <div class="alert alert-success">
-                <h2 class="alert-heading">Success!</h2>
-                <p>Your note was deleted successfully</p>
+                <h2 class="alert-heading" tabindex="0">Success!</h2>
+                <p tabindex="0">Your note was deleted successfully</p>
             </div>
         </c:if>
 
         <div class="row">
             <div class="col-sm">
-                <h2>Note Tools</h2>
+                <h2 tabindex="0">Note Tools</h2>
             </div>
         </div>
         <div class="row">
             <div class="col-sm">
-                <p>Use New Prospect to insert a new note on an NFL prospect, or use Delete a Note to remove a note from the database.</p>
+                <p tabindex="0">Use New Prospect to insert a new note on an NFL prospect, or use Delete a Note to remove a note from the database.</p>
             </div>
         </div>
         <div class="row">
@@ -49,12 +50,12 @@
 
         <div class="row">
             <div class="col-sm">
-                <h3>Credential Tools</h3>
+                <h3 tabindex="0">Credential Tools</h3>
             </div>
         </div>
         <div class="row">
             <div class="col-sm">
-                <p>To view your username and password click View/Change Credentials, or click Log Out to log out of ScoutMaster.</p>
+                <p tabindex="0">To view your username and password click View/Change Credentials, or click Log Out to log out of ScoutMaster.</p>
             </div>
         </div>
         <div class="row">
