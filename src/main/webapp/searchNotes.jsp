@@ -22,7 +22,7 @@
         <form action="/ScoutMaster_war/search" class="m-2">
             <div class="form-group row">
                 <label for="searchTerm">Search</label>
-                <input type="text" pattern="[A-Za-z\s'.-]{1,84}" name="searchTerm" id="searchTerm" class="form-control" value="${term}" required />
+                <input type="text" pattern="[A-Za-z\s'.-]{1,84}" placeholder="Raven Ravenson (Less Than 84 Characters)" name="searchTerm" id="searchTerm" class="form-control" value="${term}" required />
             </div>
             <fieldset class="form-group">
                 <div class="row">
