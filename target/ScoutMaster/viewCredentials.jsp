@@ -13,20 +13,21 @@
     <link rel="stylesheet" href="master.css" />
     <c:import url="bootstrap.jsp" />
 </head>
-<main>
-    <body>
-    <c:import url="nav.jsp" />
+<a href="#mainContent" class="skipLink">Skip</a>
+<body>
+<c:import url="nav.jsp" />
+<main id="mainContent">
     <div class="container bg-white" align="center">
         <c:if test="${passwordChanged.equals('true')}">
             <div class="alert alert-success">
-                <h3 class="alert-heading">Password Changed Successfully</h3>
-                <p>View the changed password below</p>
+                <h3 class="alert-heading" tabindex="0">Password Changed Successfully</h3>
+                <p tabindex="0"View the changed password below</p>
             </div>
         </c:if>
-        <h1>Your Credentials</h1>
-        <h2>Don't Share These With Anyone</h2>
-        <p>Username: <b>${credentials.getUsername()}</b></p>
-        <p>Password: <b>${credentials.getPassword()}</b></p>
+        <h1 tabindex="0">Your Credentials</h1>
+        <h2 tabindex="0">Don't Share These With Anyone</h2>
+        <p tabindex="0">Username: <b>${credentials.getUsername()}</b></p>
+        <p tabindex="0">Password: <b>${credentials.getPassword()}</b></p>
         <a href="/ScoutMaster_war/changePassword.jsp"><button class="btn btn-danger">Change Password</button></a>
     </div>
     <c:import url="footer.jsp" />

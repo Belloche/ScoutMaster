@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="master.css">
     <c:import url="bootstrap.jsp" />
 </head>
+<a href="#mainContent" class="skipLink">Skip</a>
+<body>
+<c:import url="nav.jsp" />
 <main id="mainContent">
-    <body>
-    <c:import url="nav.jsp" />
-
     <div class="container bg-white">
         <h1>Choose a Note to Delete</h1>
 

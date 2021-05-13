@@ -13,15 +13,16 @@
     <link rel="stylesheet" href="master.css">
     <c:import url="bootstrap.jsp" />
 </head>
-<main>
-    <body>
-    <c:import url="nav.jsp" />
+<a href="#mainContent" class="skipLink">Skip</a>
+<body>
+<c:import url="nav.jsp" />
+<main id="mainContent">
     <div class="container bg-white">
-        <h1>New Note</h1>
+        <h1 tabindex="0">New Note</h1>
         <form action="newNote">
             <div class="form-group">
                 <label for="prospect">Prospect Name</label>
-                <input type="text" name="prospect" id="prospect" class="form-control" required />
+                <input type="text" pattern="[A-Za-z\s'.-]{1,84}" placeholder="1-84 Characters" name="prospect" id="prospect" class="form-control" required />
             </div>
             <div class="form-group">
                 <label for="position">Position</label>
@@ -57,11 +58,11 @@
 
             <div class="form-group">
                 <label for="rating">Rating</label>
-                <input type="text" name="rating" id="rating" class="form-control" />
+                <input type="text" maxlength="5" placeholder="5 Characters Long" name="rating" id="rating" class="form-control" />
             </div>
             <div class="form-group">
                 <label for="report"><b>Report</b></label>
-                <textarea name="report" id="report" rows="5" class="form-control"></textarea>
+                <textarea name="report" id="report" placeholder="1024 Character Max" maxlength="1024" rows="5" class="form-control"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Submit Note</button>
         </form>

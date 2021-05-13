@@ -13,14 +13,15 @@
     <link rel="stylesheet" href="master.css">
     <c:import url="bootstrap.jsp" />
 </head>
-<main>
-    <body>
-    <c:import url="nav.jsp" />
+<a href="#mainContent" class="skipLink">Skip</a>
+<body>
+<c:import url="nav.jsp" />
+<main id="mainContent">
     <div class="container bg-white">
-        <h1>Success!</h1>
-        <p>The report was created!</p>
-        <p>If you would like to view the note click <a href="fullNote?id=${id}" class="blueLink" role="view note">Here</a></p>
-        <p>To go back to the homepage click <a href="/ScoutMaster_war/home" class="blueLink" role="home">Here</a></p>
+        <h1 tabindex="0">Success!</h1>
+        <p tabindex="0">The report was created!</p>
+        <p tabindex="0">If you would like to view the note click <a href="fullNote?id=${id}" class="blueLink" role="view note">Here</a></p>
+        <p tabindex="0">To go back to the homepage click <a href="/ScoutMaster_war/home" class="blueLink" role="home">Here</a></p>
     </div>
     <c:import url="footer.jsp" />
     </body>

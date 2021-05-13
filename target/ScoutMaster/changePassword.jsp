@@ -13,10 +13,11 @@
     <link rel="stylesheet" href="master.css" />
     <c:import url="bootstrap.jsp" />
 </head>
-<main id="mainContent">
-    <body>
-    <c:import url="nav.jsp" />
-    <div class="container bg-white">
+<a href="#mainContent" class="skipLink">Skip</a>
+<body>
+<c:import url="nav.jsp" />
+<div class="container bg-white">
+    <main id="mainContent">
         <h1 class="text-center" tabindex="0">Change Your Password</h1>
         <c:if test="${incorrect.equals('true')}">
             <div class="alert alert-danger">

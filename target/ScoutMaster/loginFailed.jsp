@@ -13,12 +13,13 @@
     <link rel="stylesheet" href="master.css" />
     <c:import url="bootstrap.jsp" />
 </head>
-<main>
-    <body>
-    <c:import url="nav.jsp" />
+<a href="#mainContent" class="skipLink">Skip</a>
+<body>
+<c:import url="nav.jsp" />
+<main id="mainContent">
     <div class="container bg-white">
-        <h1>Access Denied</h1>
-        <h3>Looks like your login was wrong, please try again</h3>
+        <h1 tabindex="0">Access Denied</h1>
+        <h2 tabindex="0">Looks like your login was wrong, please try again</h2>
     </div>
     <c:import url="footer.jsp" />
     </body>
